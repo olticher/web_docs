@@ -149,7 +149,7 @@
         return queryset
 </code></pre>
 <p>Фильтруем туры, где количество мест равно 5</p>
-<p><img alt="" src="/images/filter_manual_1.png" /></p>
+<p><img alt="" src="../images/filter_manual_1.png" /></p>
 <h4 id="2-tours-by-count-destination-list">2) Tours By Count Destination List</h4>
 <pre><code>class ToursByCountDestinationListView(generics.ListAPIView):
     serializer_class = TourSerializer
@@ -165,7 +165,7 @@
         return queryset
 </code></pre>
 <p>Запрос с туром в Италию, где количество мест равно 19</p>
-<p><img alt="" src="/images/filter_manual_2.png" /></p>
+<p><img alt="" src="../images/filter_manual_2.png" /></p>
 <h4 id="3-reservations-by-count-approved-list">3) Reservations By Count Approved List</h4>
 <pre><code>class ReservationsByCountApprovedListView(generics.ListAPIView):
     serializer_class = ReservationReadSerializer
@@ -183,7 +183,7 @@
         return queryset
 </code></pre>
 <p>Поиск тура с подтвержденным бронированием на двух человек</p>
-<p><img alt="" src="/images/filter_manual_3.png" /></p>
+<p><img alt="" src="../images/filter_manual_3.png" /></p>
 <h4 id="_3">Автоматические фильтры</h4>
 <h4 id="1-reviews-ordered-filter">1) Reviews Ordered Filter</h4>
 <pre><code>class ReviewsOrderedFilterView(generics.ListAPIView):
@@ -200,7 +200,7 @@
     pagination_class = CustomPagination
 </code></pre>
 <p>Отзывы для тура с reservation__tour_id = 7 (Испания)
-<img alt="" src="/images/auto_filter_1.png" /></p>
+<img alt="" src="../images/auto_filter_1.png" /></p>
 <h4 id="2-reservations-search-filter-view-all">2) Reservations Search Filter View All</h4>
 <pre><code>class ReservationsSearchFilterViewAll(generics.ListAPIView):
 
@@ -211,7 +211,7 @@
     search_fields = ('count', 'tour__destination')
 </code></pre>
 <p>Тур в Испанию с бронью на 1 человека
-<img alt="" src="/images/auto_filter_2.png" /></p>
+<img alt="" src="../images/auto_filter_2.png" /></p>
 <h4 id="3-tours-price-range-filter">3) Tours Price Range Filter</h4>
 <pre><code>class ToursPriceRangeFilterView(generics.ListAPIView):
     queryset = Tour.objects.all()
@@ -220,7 +220,7 @@
     pagination_class = CustomPagination
 </code></pre>
 <p>Фильтр по цене от 1000 до 60000
-<img alt="" src="/images/auto_filter_3.png" /></p>
+<img alt="" src="../images/auto_filter_3.png" /></p>
 <h4 id="_4">Загрузка файлов</h4>
 <p>В Django REST поддерживается загрузка только 1 файла</p>
 <pre><code>class ReviewPhoto(models.Model):
@@ -262,16 +262,16 @@ def validate_file_type(file):
     if content_type not in photo_extensions:
         raise ValidationError(f'Files of type {content_type} are not supported.')
 </code></pre>
-<p><img alt="" src="/images/upload_one_photo_1.png" /></p>
+<p><img alt="" src="../images/upload_one_photo_1.png" /></p>
 <p>Результат:</p>
-<p><img alt="" src="/images/upload_one_photo_2.png" /></p>
+<p><img alt="" src="../images/upload_one_photo_2.png" /></p>
 <p>Для загрузки нескольких файлов воспользуемся Postman</p>
-<p><img alt="" src="/images/upload_several_photos_1.png" /></p>
+<p><img alt="" src="../images/upload_several_photos_1.png" /></p>
 <p>Результат:</p>
-<p><img alt="" src="/images/upload_several_photos_2.png" /></p>
+<p><img alt="" src="../images/upload_several_photos_2.png" /></p>
 <h4 id="_5">Пагинация</h4>
 <p>При увеличении диапазона цены до 500000 видим пагинацию
-<img alt="" src="/images/pagination.png" /></p>
+<img alt="" src="../images/pagination.png" /></p>
 <p>Настройки пагинации в settings.py</p>
 <pre><code>REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS':
@@ -299,9 +299,9 @@ def create_tour(sender, instance, created, **kwargs):
     if created:
         print(f'\n{instance} создан!')
 </code></pre>
-<p><img alt="" src="/images/signal1.png" /></p>
+<p><img alt="" src="../images/signal1.png" /></p>
 <p>Сигнал сработал</p>
-<p><img alt="" src="/images/signal1result.png" /></p>
+<p><img alt="" src="../images/signal1result.png" /></p>
 <h4 id="2">2) Сигнал на обновление стоимости тура</h4>
 <pre><code>@receiver(pre_save, sender=Tour)
 def update_tour_price(sender, instance, **kwargs):
@@ -314,9 +314,9 @@ def update_tour_price(sender, instance, **kwargs):
     except ObjectDoesNotExist:
         pass
 </code></pre>
-<p><img alt="" src="/images/signal2.png" /></p>
+<p><img alt="" src="../images/signal2.png" /></p>
 <p>Сигнал сработал</p>
-<p><img alt="" src="/images/signal2result.png" /></p>
+<p><img alt="" src="../images/signal2result.png" /></p>
 <h4 id="3">3) Сигнал на удаление тура</h4>
 <pre><code>@receiver(pre_delete, sender=Tour)
 def delete_tour(sender, instance, **kwargs):
@@ -324,9 +324,9 @@ def delete_tour(sender, instance, **kwargs):
         f.write(f'Тур {instance} удален\n')
 </code></pre>
 <p>Запись в логах после удаления</p>
-<p><img alt="" src="/images/signal3.png" /></p>
+<p><img alt="" src="../images/signal3.png" /></p>
 <p>Статус 200, удаление прошло успешно</p>
-<p><img alt="" src="/images/signal3result.png" /></p>
+<p><img alt="" src="../images/signal3result.png" /></p>
               
             </div>
           </div>
