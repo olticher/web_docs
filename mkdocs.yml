@@ -1,0 +1,11 @@
+site_name: My Docs
+pages:
+ - Титульник: intro.md
+ - Введение: observation.md
+ - Ход работы: 
+    - Лабораторная работа №1: work.md
+    - Лабораторная работа №2: lab2.md
+    - Лабораторная работа №3: lab3.md
+    - Лабораторная работа №4: lab4.md
+
+theme: readthedocs

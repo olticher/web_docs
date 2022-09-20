@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Лабораторная работа №2 - My Docs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u041b\u0430\u0431\u043e\u0440\u0430\u0442\u043e\u0440\u043d\u0430\u044f \u0440\u0430\u0431\u043e\u0442\u0430 \u21162";
+    var mkdocs_page_input_path = "lab2.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> My Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../intro/">Титульник</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../observation/">Введение</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Ход работы</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../work/">Лабораторная работа №1</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Лабораторная работа №2</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">Ручные фильтры</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#1-tours-by-count-list">1) Tours By Count List</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-tours-by-count-destination-list">2) Tours By Count Destination List</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-reservations-by-count-approved-list">3) Reservations By Count Approved List</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">Автоматические фильтры</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#1-reviews-ordered-filter">1) Reviews Ordered Filter</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-reservations-search-filter-view-all">2) Reservations Search Filter View All</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-tours-price-range-filter">3) Tours Price Range Filter</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">Загрузка файлов</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">Пагинация</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">Сигналы</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#1">1) Сигнал на создание тура</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2">2) Сигнал на обновление стоимости тура</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3">3) Сигнал на удаление тура</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../lab3/">Лабораторная работа №3</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../lab4/">Лабораторная работа №4</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">My Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Ход работы &raquo;</li>
+        
+      
+    
+    <li>Лабораторная работа №2</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="_1">Фильтры</h3>
+<h4 id="_2">Ручные фильтры</h4>
+<h4 id="1-tours-by-count-list">1) Tours By Count List</h4>
+<pre><code>class ToursByCountListView(generics.ListAPIView):
+    serializer_class = TourSerializer
+    pagination_class = CustomPagination
+
+    def get_queryset(self):
+        queryset = Tour.objects.all()
+        count = self.request.query_params.get('count')
+
+        if count:
+            queryset = queryset.filter(count=count)
+
+        return queryset
+</code></pre>
+<p>Фильтруем туры, где количество мест равно 5</p>
+<p><img alt="" src="/images/filter_manual_1.png" /></p>
+<h4 id="2-tours-by-count-destination-list">2) Tours By Count Destination List</h4>
+<pre><code>class ToursByCountDestinationListView(generics.ListAPIView):
+    serializer_class = TourSerializer
+
+    def get_queryset(self):
+        queryset = Tour.objects.all()
+        count = self.request.query_params.get('count')
+        destination = self.request.query_params.get('destination')
+
+        if count and destination:
+            queryset = queryset.filter(count=count, destination=destination)
+
+        return queryset
+</code></pre>
+<p>Запрос с туром в Италию, где количество мест равно 19</p>
+<p><img alt="" src="/images/filter_manual_2.png" /></p>
+<h4 id="3-reservations-by-count-approved-list">3) Reservations By Count Approved List</h4>
+<pre><code>class ReservationsByCountApprovedListView(generics.ListAPIView):
+    serializer_class = ReservationReadSerializer
+
+    def get_queryset(self):
+        queryset = Reservation.objects.all()
+        user = self.request.user
+
+        if user.is_authenticated:
+            count = self.request.query_params.get('count')
+            approved = self.request.query_params.get('approved')
+            if count and approved:
+                queryset = queryset.filter(count=count, approved=approved)
+
+        return queryset
+</code></pre>
+<p>Поиск тура с подтвержденным бронированием на двух человек</p>
+<p><img alt="" src="/images/filter_manual_3.png" /></p>
+<h4 id="_3">Автоматические фильтры</h4>
+<h4 id="1-reviews-ordered-filter">1) Reviews Ordered Filter</h4>
+<pre><code>class ReviewsOrderedFilterView(generics.ListAPIView):
+
+    def get_queryset(self):
+        return Review.objects.filter(
+            # reservation__tour_id=self.request.query_params.tour
+            reservation__tour_id=self.kwargs.get('tour')
+        )
+
+    serializer_class = ReviewSerializer
+    filter_backends = (filters.OrderingFilter,)
+    filterset_fields = 'stars'
+    pagination_class = CustomPagination
+</code></pre>
+<p>Отзывы для тура с reservation__tour_id = 7 (Испания)
+<img alt="" src="/images/auto_filter_1.png" /></p>
+<h4 id="2-reservations-search-filter-view-all">2) Reservations Search Filter View All</h4>
+<pre><code>class ReservationsSearchFilterViewAll(generics.ListAPIView):
+
+    queryset = Reservation.objects.all()
+    serializer_class = ReservationReadSerializer
+    filter_backends = (filters.SearchFilter,)
+    pagination_class = CustomPagination
+    search_fields = ('count', 'tour__destination')
+</code></pre>
+<p>Тур в Испанию с бронью на 1 человека
+<img alt="" src="/images/auto_filter_2.png" /></p>
+<h4 id="3-tours-price-range-filter">3) Tours Price Range Filter</h4>
+<pre><code>class ToursPriceRangeFilterView(generics.ListAPIView):
+    queryset = Tour.objects.all()
+    serializer_class = TourSerializer
+    filterset_class = ToursPriceRangeFilter
+    pagination_class = CustomPagination
+</code></pre>
+<p>Фильтр по цене от 1000 до 60000
+<img alt="" src="/images/auto_filter_3.png" /></p>
+<h4 id="_4">Загрузка файлов</h4>
+<p>В Django REST поддерживается загрузка только 1 файла</p>
+<pre><code>class ReviewPhoto(models.Model):
+    review = models.ForeignKey('Review',
+                                    on_delete=models.CASCADE,
+                                    related_name='review_photos')
+    file = models.FileField(
+        validators=[validate_file_size, validate_file_type],
+        upload_to=get_upload_path
+    )
+    file_name = models.CharField(max_length=100, blank=True, null=True)
+    file_size = models.IntegerField(blank=True, null=True)
+
+    def __str__(self):
+        return f'Photo in {str(self.review)}'
+
+    def save(self, *args, **kwargs):
+        self.file_name = self.file.name
+        self.file_size = self.file.size
+        super(ReviewPhoto, self).save(*args, **kwargs)
+</code></pre>
+<p>validators.py</p>
+<pre><code>from django.core.exceptions import ValidationError
+import magic
+
+
+def validate_file_size(file):
+    MAX_MB = 5
+    limit = MAX_MB * 1024 * 1024
+
+    if file.size &gt; limit:
+        raise ValidationError(f'The file size is more than {MAX_MB} MB.')
+
+
+def validate_file_type(file):
+    photo_extensions = ['image/png', 'image/jpeg', 'image/jpg']
+
+    content_type = magic.from_buffer(file.read(), mime=True)
+    if content_type not in photo_extensions:
+        raise ValidationError(f'Files of type {content_type} are not supported.')
+</code></pre>
+<p><img alt="" src="/images/upload_one_photo_1.png" /></p>
+<p>Результат:</p>
+<p><img alt="" src="/images/upload_one_photo_2.png" /></p>
+<p>Для загрузки нескольких файлов воспользуемся Postman</p>
+<p><img alt="" src="/images/upload_several_photos_1.png" /></p>
+<p>Результат:</p>
+<p><img alt="" src="/images/upload_several_photos_2.png" /></p>
+<h4 id="_5">Пагинация</h4>
+<p>При увеличении диапазона цены до 500000 видим пагинацию
+<img alt="" src="/images/pagination.png" /></p>
+<p>Настройки пагинации в settings.py</p>
+<pre><code>REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS':
+        ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_PAGINATION_CLASS':
+        'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 3,
+    &quot;DEFAULT_AUTHENTICATION_CLASSES&quot;: (
+        &quot;rest_framework_simplejwt.authentication.JWTAuthentication&quot;,
+        &quot;rest_framework.authentication.BasicAuthentication&quot;,
+        &quot;rest_framework.authentication.SessionAuthentication&quot;
+    ),
+}
+</code></pre>
+<h4 id="_6">Сигналы</h4>
+<p>Реализовать 3 сигнала, которые:</p>
+<ul>
+<li>Вызывает логику, во время создания экземпляра объекта.</li>
+<li>Сохраняет значения выбранных полей в таблице в специальные поля для хранения предыдущих значений при обновлении объекта.</li>
+<li>При удалении объекта записывает информацию об удалении в лог реализованный любым образом.</li>
+</ul>
+<h4 id="1">1) Сигнал на создание тура</h4>
+<pre><code>@receiver(post_save, sender=Tour)
+def create_tour(sender, instance, created, **kwargs):
+    if created:
+        print(f'\n{instance} создан!')
+</code></pre>
+<p><img alt="" src="/images/signal1.png" /></p>
+<p>Сигнал сработал</p>
+<p><img alt="" src="/images/signal1result.png" /></p>
+<h4 id="2">2) Сигнал на обновление стоимости тура</h4>
+<pre><code>@receiver(pre_save, sender=Tour)
+def update_tour_price(sender, instance, **kwargs):
+    try:
+        prev_instance = Tour.objects.get(id=instance.id)
+        instance.prev_price = prev_instance.price
+        print(f'Цена обновлена: {instance}\n'
+              f'стоил: {instance.prev_price},\n'
+              f'а теперь стоит: {instance.price}\n')
+    except ObjectDoesNotExist:
+        pass
+</code></pre>
+<p><img alt="" src="/images/signal2.png" /></p>
+<p>Сигнал сработал</p>
+<p><img alt="" src="/images/signal2result.png" /></p>
+<h4 id="3">3) Сигнал на удаление тура</h4>
+<pre><code>@receiver(pre_delete, sender=Tour)
+def delete_tour(sender, instance, **kwargs):
+    with open('deleted_log.txt', 'a') as f:
+        f.write(f'Тур {instance} удален\n')
+</code></pre>
+<p>Запись в логах после удаления</p>
+<p><img alt="" src="/images/signal3.png" /></p>
+<p>Статус 200, удаление прошло успешно</p>
+<p><img alt="" src="/images/signal3result.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../lab3/" class="btn btn-neutral float-right" title="Лабораторная работа №3">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../work/" class="btn btn-neutral" title="Лабораторная работа №1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../work/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lab3/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
